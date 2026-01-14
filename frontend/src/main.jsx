@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App.jsx'
 import './assets/css/style.scss';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
