@@ -171,16 +171,17 @@ ul {
 
 
   footer{
-    background-color: #03284b;
+    background-color: #ffffff;
+
     h3{
-        color: whitesmoke;
+        color: rgb(0, 0, 0);
         font-size: 1.5em;
     }
     ul{
         li{
             a{
                 font-size: 1.2em;
-                color: whitesmoke;
+                color: rgb(0, 0, 0);
                 margin-bottom:10px
             }
         }
@@ -191,6 +192,23 @@ ul {
         border-top: 1px solid rgba($primary-white, 0.2);
         border-bottom:1px solid rgba($primary-white, 0.2); ;
     }
+
+    .short-text{
+    color: #37393b;
+        overflow: hidden;
+        text-align: justify;
+        
+    }
+
+    .allcols{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+   
+  
   }
 
   @media (min-width: 200px) and (max-width: 767px) {
@@ -216,3 +234,37 @@ ul {
     color: $primary-black;
     
   }
+
+
+  .newsletter{
+    background-color: #e82d31;
+    
+    .newslet{
+        width: 600px;
+        border-radius: 50px;
+           .form-place{
+            border-radius: 30px;
+           }
+          
+        .subbtn{
+            border-radius: 50px;
+        }
+    }
+
+
+  }
+
+  
+  .iconz{
+    transition: transform 0.3s, color 0.3s;
+  &:hover{
+    transform: scale(1.2);
+    color: #000000;  
+  }  
+}
+
+
+.form-place:focus{
+    outline: none;
+    box-shadow: none;
+}
