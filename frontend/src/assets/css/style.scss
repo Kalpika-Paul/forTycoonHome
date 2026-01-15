@@ -101,28 +101,25 @@ ul {
 
 
 @media (max-width: 576px) {
-
-  .navbar > .container {
-    display: flex;
-    flex-direction: column; /* stack items vertically */
-    align-items: center;    /* center horizontally */
-  }
-
-  .navbar-brand {
-    order: 1;
-    margin-bottom: 10px; /* some spacing below logo */
-  }
-
-  .navbar-toggler {
-    order: 2;
-    margin: 0 auto 10px; /* center toggle button */
-  }
-
   .searchbar {
-    order: 3;             /* put search below toggle/logo */
-    width: 90%;           /* almost full width */
-    max-width: 350px;     /* optional max width */
-    margin: 0 auto 20px;  /* center horizontally with spacing below */
+    width: 100%;
+    max-width: 550px;
+    margin: 10px auto 20px;
+    display: flex;
+   
+  }
+
+  .form-place {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .sbtn {
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 0 15px 15px 0;
   }
 }
 
@@ -199,7 +196,15 @@ ul {
   
   // ...........for slider end..............
 
-
+  .sectionThree {
+    overflow: hidden; 
+  }
+ 
+  .img-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 //  ........for banner end..............
 
 .fade {
@@ -336,90 +341,87 @@ ul {
 
 // ........products start.........
 
- 
-.productTop{
+.productTop {
   font-weight: 800;
   font-size: 40px;
 }
 
-.pbtn{
+
+.pbtn {
   background-color: rgb(11, 161, 225);
   border-radius: 10px;
   color: whitesmoke;
-  padding: 10px 50px;
+  padding: 10px 30px;
   border: none;
-
-&:hover{
-  background-color: #047417;
-  color: #ffffff;
+  width: 100%;
+  transition: background 0.3s ease;
 }
+
+.pbtn:hover {
+  background-color: #047417;
+  color: #fff;
 }
 
 .sectionFour {
-  position: relative;
-  overflow-x: hidden;
-
-  .slick-prev,
-  .slick-next {
-    z-index: 10;
-
-    &::before {
-      color: #e82d31 !important;
-      font-size: 30px;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    .slick-prev {
-      left: 5px;
-    }
-    .slick-next {
-      right: 5px;
-    }
-  }
+  overflow: hidden;
+}
 
 
-  @media (max-width: 992px) {
-    .slick-prev {
-      left: 8px;
-    }
-    .slick-next {
-      right: 8px;
-    }
-  }
+.productTop {
+  font-size: 40px;
+  font-weight: 800;
+}
 
-  
-  @media (max-width: 576px) {
-    .slick-prev {
-      left: 5px; 
-    }
-
-    .slick-next {
-      right: 5px; 
-    }
+@media (max-width: 576px) {
+  .productTop {
+    font-size: 28px;
   }
 }
 
-@media (max-width: 370px) {
-  .slick-prev {
-    left: 2px;
-  }
-  .slick-next {
-    right: 2px;
-  }
 
-  .slick-prev::before,
-  .slick-next::before {
-    font-size: 20px; 
-  }
+.product-card {
+  border: none;
+  padding: 12px;
+  height: 100%;
+  transition: transform 0.3s ease;
 }
 
-.cardhover{
-  transition: transform 0.3s ease-in;
-&:hover{
-transform: scale(1.05);
+@media (hover: hover) {
+  .product-card:hover {
+    transform: scale(1.05);
+  }
 }
+
+
+.product-img {
+  height: 180px;
+  object-fit: contain;
+  width: 100%;
 }
+
+
+.product-text {
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  word-break: break-word;
+}
+
+
+.pbtn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(11, 161, 225);
+  color: #fff;
+}
+
+.pbtn:hover {
+  background-color: #047417;
+}
+
+
 // ........products end.........
 
   
@@ -443,44 +445,60 @@ background-color:#e82d31;
   padding: 60px 0;
   background-color: #f9f9f9;
   text-align: center;
+}
 
 
-  .testimonial-slider {
-    .slick-slide {
-      transition: transform 0.3s;
-      opacity: 0.6;
-      padding: 0 10px;
-    }
+.testimonialTop {
+  font-weight: 800;
+  font-size: 40px;
+}
 
-    .slick-center {
-      transform: scale(1.1); 
-      opacity: 1;
-    }
-  }
-
-  .testimonial-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-
-    .feedback {
-      font-style: italic;
-      font-size: 1rem;
-      margin-bottom: 15px;
-      color: #555;
-    }
-
-    .name {
-      font-weight: 600;
-      color: #e82d31;
-    }
+@media (max-width: 576px) {
+  .testimonialTop {
+    font-size: 28px;
   }
 }
 
-.testimonialTop{
-  font-weight: 800;
-  font-size: 40px;
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+
+@media (hover: hover) {
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+
+.feedback {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.name {
+  font-weight: 600;
+  color: #e82d31;
+}
+
+
+@media (max-width: 576px) {
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .feedback {
+    font-size: 0.95rem;
+  }
 }
 
 // ...........Testimonial end..............

@@ -12,7 +12,7 @@ import BannerImage from "../assets/img/8b.jpeg";
 
 const Home = () => {
 
-  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,12 +23,12 @@ const Home = () => {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
-  
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSuccess("");
@@ -52,7 +52,7 @@ const Home = () => {
     }
   };
 
- 
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade");
 
@@ -80,11 +80,11 @@ const Home = () => {
         <div className="container-fluid mt-5">
           <div className="row">
             <div className="col-12">
-            <img
-  src={BannerImage}
-  alt="Tycoon Hi-Tech Park showcasing latest technology solutions"
-  className="img-banner fade"
-/>
+              <img
+                src={BannerImage}
+                alt="Tycoon Hi-Tech Park showcasing latest technology solutions"
+                className="img-banner fade"
+              />
 
 
             </div>

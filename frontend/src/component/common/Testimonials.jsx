@@ -1,48 +1,44 @@
-import React from 'react'
-import Slider from "react-slick";
-import { Autoplay } from 'swiper/modules';
-import { Container } from 'react-bootstrap'
-import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+
 const Testimonials = () => {
+  const testimonials = [
+    {
+      name: "xyz",
+      feedback:
+        "The quality and performance of Tycoon products are truly impressive! Great value for money"
+    },
+    {
+      name: "xyz",
+      feedback:
+        "The quality and performance of Tycoon products are truly impressive! Great value for money"
+    },
+    {
+      name: "xyz",
+      feedback:
+        "The quality and performance of Tycoon products are truly impressive! Great value for money"
+    }
+  ];
 
-    const settings = {
-        centerMode: true,
-        centerPadding: "0px",
-        slidesToShow: 3,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [
-          { breakpoint: 1200, settings: { slidesToShow: 3 } },
-          { breakpoint: 992, settings: { slidesToShow: 2 } },
-          { breakpoint: 576, settings: { slidesToShow: 1 } },
-        ],
-      };
-
-      const testimonials = [
-        { name: "xyz", feedback: "The quality and performance of Tycoon products are truly impressive! Great value for money" },
-        { name: "xyz", feedback: "The quality and performance of Tycoon products are truly impressive! Great value for money" },
-        { name: "xyz", feedback: "The quality and performance of Tycoon products are truly impressive! Great value for money" },
-        { name: "xyz", feedback: "The quality and performance of Tycoon products are truly impressive! Great value for money" },
-        { name: "xyz", feedback: "The quality and performance of Tycoon products are truly impressive! Great value for money" },
-      ];
   return (
-    <section className="sectionsix ">
-        <div className="container py-5">
-          <h2 className="section-title testimonialTop mb-5">Testimonials</h2>
-          <Slider {...settings} className="testimonial-slider">
-            {testimonials.map((item, index) => (
-              <div className="testimonial-card" key={index}>
-                <p className="feedback">"{item.feedback}"</p>
-                <h4 className="name">- {item.name}</h4>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </section>
-  )
-}
+    <section className="sectionsix">
+      <Container>
+        <h2 className="testimonialTop mb-5 text-center">Testimonials</h2>
 
-export default Testimonials
+        <Row className="g-4 justify-content-center">
+          {testimonials.map((item, index) => (
+            <Col key={index} xs={12} md={4}>
+              <div className="testimonial-card h-100">
+                <p className="feedback">“{item.feedback}”</p>
+                <h4 className="name">— {item.name}</h4>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
+  );
+};
+
+export default Testimonials;
+
